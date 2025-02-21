@@ -1,5 +1,6 @@
 A Car Game using sprite stacking technique
 
-![StackingCar](https://github.com/user-attachments/assets/1e9f10d2-c4ec-4df7-bdeb-51d66fd8d363)
+![SpriteStackingCar](https://github.com/user-attachments/assets/e496048e-ee66-4089-bfe7-9daf7dd54d2d)
+
 
 On progress 

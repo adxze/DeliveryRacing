@@ -11,6 +11,7 @@ public class newCar : MonoBehaviour
 
     [Header("Sprite Stacking")]
     [SerializeField] private Sprite[] carSprites;
+    [SerializeField] private Sprite[] carSpritesFull;
     [SerializeField] private float layerSpacing = 0.1f;
     [SerializeField] private float perspectiveOffset = 0.05f;
     [SerializeField] private Vector2 offsetDirection = new Vector2(0, 1);
@@ -86,6 +87,7 @@ public class newCar : MonoBehaviour
     {
         float verticalInput = Input.GetAxis("Vertical");
         float horizontalInput = Input.GetAxis("Horizontal");
+        
 
         movement = transform.right * verticalInput * moveSpeed;
 
@@ -168,11 +170,17 @@ public class newCar : MonoBehaviour
         }
     }
 
-        private void OnCollisionEnter2D(Collision2D collision)
-        {
-            if (collision.gameObject.tag == "Booster")
-            {
-                Debug.Log("Booster");
-            }
-        }
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        spriteLayers[6].GetComponent<SpriteRenderer>().sprite = carSpritesFull[0];
+        shadowLayers[6].GetComponent<SpriteRenderer>().sprite = carSpritesFull[0];
+
+        spriteLayers[7].GetComponent<SpriteRenderer>().sprite = carSpritesFull[1];
+        shadowLayers[7].GetComponent<SpriteRenderer>().sprite = carSpritesFull[1];
+
+        spriteLayers[8].GetComponent<SpriteRenderer>().sprite = carSpritesFull[2];
+        shadowLayers[8].GetComponent<SpriteRenderer>().sprite = carSpritesFull[2];
+
+    }
+
 }

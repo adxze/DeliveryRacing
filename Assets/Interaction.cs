@@ -4,13 +4,8 @@ using UnityEngine;
 
 public class Interaction : MonoBehaviour
 {
-
-    public void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Booster")
-        {
-            Debug.Log("Booster");
-        }
+        Debug.Log("Detected Trigger");
     }
-
 }

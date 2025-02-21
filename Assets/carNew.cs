@@ -93,12 +93,15 @@ public class newCar : MonoBehaviour
 
         if (Mathf.Abs(verticalInput) > 0.1f)
         {
-            float rotation = horizontalInput * rotationSpeed * Time.deltaTime;
-            currentRotation = rotation;
+            // float rotation = horizontalInput * rotationSpeed * Time.deltaTime;
+            // currentRotation = rotation;
+
+            rb.angularVelocity = -horizontalInput * rotationSpeed;
         }
         else
         {
-            currentRotation *= driftFactor;
+            // currentRotation *= driftFactor;
+            rb.angularVelocity *= driftFactor;
         }
 
         transform.Rotate(0, 0, -currentRotation);

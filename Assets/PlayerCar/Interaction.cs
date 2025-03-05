@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Interaction : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class Interaction : MonoBehaviour
         if (item.CompareTag("Item") && !_hasPakage)
         {
             Debug.Log("item received");
+            
             _hasPakage = true;
         }
 

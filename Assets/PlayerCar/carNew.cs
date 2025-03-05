@@ -1,6 +1,6 @@
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class carNew : MonoBehaviour
 {
     [Header("Car Settings")]
@@ -31,6 +31,13 @@ public class carNew : MonoBehaviour
     [Header("Collider Settings")]
     [SerializeField] private Vector2 initialColliderOffset = Vector2.zero; 
     
+    [Header("Adding Movement")]
+    [Tooltip("Assign a MovementInput component here (or AI input ).")]
+    [SerializeField] private bool IsPlayer; 
+    public MovementInput input;
+    public AIControl aiInput;
+    
+    
     private Vector2 movement;
     private float currentRotation;
     private GameObject[] spriteLayers;
@@ -39,6 +46,9 @@ public class carNew : MonoBehaviour
     private CapsuleCollider2D capsuleCollider;
 
     private bool _hasPakage;
+    
+    //experiment 
+
 
     private void Start()
     {
@@ -99,18 +109,37 @@ public class carNew : MonoBehaviour
 
     private void Update()
     {
-        float verticalInput = Input.GetAxis("Vertical");
-        float horizontalInput = Input.GetAxis("Horizontal");
+        float verticalInput = 0;
+        float horizontalInput = 0;
+        
+        if (IsPlayer && input != null)
+        {
+            verticalInput = input.verticalInput;
+            horizontalInput = input.horizontalInput;
+        }
+        else if (!IsPlayer && aiInput != null )
+        {
+            verticalInput = aiInput.verticalInput;
+            horizontalInput = aiInput.horizontalInput;
+        }
+
+        // float verticalInput = input.verticalInput;
+        // float horizontalInput = input.horizontalInput;
+ 
+
+        // float verticalInput = Input.GetAxis("Vertical");
+        // float horizontalInput = Input.GetAxis("Horizontal");
         
 
-        movement = transform.right * verticalInput * moveSpeed;
+        movement = transform.right * (verticalInput * moveSpeed);
 
         if (Mathf.Abs(verticalInput) > 0.1f)
         {
             // float rotation = horizontalInput * rotationSpeed * Time.deltaTime;
             // currentRotation = rotation;
-
-            rb.angularVelocity = -horizontalInput * rotationSpeed;
+            // -- minimal fix for inverted backward movement 
+            float forwardSign = Mathf.Sign(verticalInput);
+            rb.angularVelocity = -horizontalInput * rotationSpeed * forwardSign;
         }
         else
         {
@@ -192,7 +221,7 @@ public class carNew : MonoBehaviour
     void OnTriggerEnter2D(Collider2D target)
     {
 
-        if(target.CompareTag("Item") && !_hasPakage)
+        if(target.CompareTag("Item") && !_hasPakage && this.CompareTag("Player"))
         {
             spriteLayers[6].GetComponent<SpriteRenderer>().sprite = carSpritesFull[0];
             // shadowLayers[6].GetComponent<SpriteRenderer>().sprite = carSpritesFull[0];
@@ -204,12 +233,19 @@ public class carNew : MonoBehaviour
             _hasPakage = true;
 
         }
-        if(target.CompareTag("Point") && _hasPakage)
+        if(target.CompareTag("Point") && _hasPakage && this.CompareTag("Player"))
         {
             spriteLayers[6].GetComponent<SpriteRenderer>().sprite = carSprites[6];
             spriteLayers[7].GetComponent<SpriteRenderer>().sprite = carSprites[7];
             spriteLayers[8].GetComponent<SpriteRenderer>().sprite = carSprites[8];
             _hasPakage = false;
+            ScoreManager.instance.addPoints(10);
+        }
+
+        if (target.CompareTag("Death"))
+        {
+            Scene currentScene = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(currentScene.name);
         }
         
     }

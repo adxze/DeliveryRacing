@@ -79,7 +79,9 @@ MonoBehaviour:
   depthAngleY: 0
   depthAngleLerpSpeed: 5
   initialColliderOffset: {x: 0, y: 0}
+  IsPlayer: 1
   input: {fileID: 0}
+  aiInput: {fileID: 0}
 --- !u!50 &8724774076329351263
 Rigidbody2D:
   serializedVersion: 4

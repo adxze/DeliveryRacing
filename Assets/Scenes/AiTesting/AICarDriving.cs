@@ -1,7 +1,7 @@
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class carNew : MonoBehaviour
+public class AICarDriving : MonoBehaviour
 {
     [Header("Car Settings")]
     [SerializeField] private float moveSpeed = 5f;
@@ -117,41 +117,54 @@ public class carNew : MonoBehaviour
             verticalInput = input.verticalInput;
             horizontalInput = input.horizontalInput;
         }
-        else if (!IsPlayer && aiInput != null )
+        else if (!IsPlayer && aiInput != null)
         {
             verticalInput = aiInput.verticalInput;
             horizontalInput = aiInput.horizontalInput;
         }
 
-        // float verticalInput = input.verticalInput;
-        // float horizontalInput = input.horizontalInput;
- 
-
-        movement = transform.right * (verticalInput * moveSpeed);
-
-        if (Mathf.Abs(verticalInput) > 0.1f)
+        // Updated movement logic
+        if (IsPlayer)
         {
-            // float rotation = horizontalInput * rotationSpeed * Time.deltaTime;
-            // currentRotation = rotation;
-            // -- minimal fix for inverted backward movement 
-            float forwardSign = Mathf.Sign(verticalInput); // explore more
-            rb.angularVelocity = -horizontalInput * rotationSpeed * forwardSign;
+            // Original player movement logic
+            movement = transform.right * (verticalInput * moveSpeed);
+
+            if (Mathf.Abs(verticalInput) > 0.1f)
+            {
+                float forwardSign = Mathf.Sign(verticalInput);
+                rb.angularVelocity = -horizontalInput * rotationSpeed * forwardSign;
+            }
+            else
+            {
+                rb.angularVelocity *= driftFactor;
+            }
         }
         else
         {
-            // currentRotation *= driftFactor;
-            rb.angularVelocity *= driftFactor;
+            // Modified AI movement logic
+            movement = transform.right * (verticalInput * moveSpeed);
+            
+            // When moving, apply steering directly without the verticalInput dependency
+            if (Mathf.Abs(verticalInput) > 0.1f)
+            {
+                // Direct rotation control for AI - removes the circular motion
+                float targetRotation = -horizontalInput * rotationSpeed;
+                
+                // Apply smoother rotation for AI to prevent overshooting
+                rb.angularVelocity = Mathf.Lerp(rb.angularVelocity, targetRotation, Time.deltaTime * 5f);
+            }
+            else
+            {
+                // Apply drift when not actively moving (same as player)
+                rb.angularVelocity *= driftFactor;
+            }
         }
-
-        transform.Rotate(0, 0, -currentRotation); // Useless
-
-
     }
 
     private void FixedUpdate()
     {
         rb.velocity = movement;
-        UpdateDepthAngles(); // put in fixed update so that it wont stutter with the camerea
+        UpdateDepthAngles();
         UpdateLayerPerspective();
         CapsuleRotation();
     }
@@ -260,7 +273,4 @@ public class carNew : MonoBehaviour
             capsuleCollider.offset = new Vector2(localOffset.x, localOffset.y) + initialColliderOffset;
         }
     }
-
 }
-
-

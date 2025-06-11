@@ -1,0 +1,166 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &7846577014952414577
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5437073390709071167, guid: 93e8d860bfd5e45eb9102ef8aec09826, type: 3}
+      propertyPath: input
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5437073390709071167, guid: 93e8d860bfd5e45eb9102ef8aec09826, type: 3}
+      propertyPath: aiInput
+      value: 
+      objectReference: {fileID: 2544172443895014514}
+    - target: {fileID: 5437073390709071167, guid: 93e8d860bfd5e45eb9102ef8aec09826, type: 3}
+      propertyPath: IsPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5437073390709071167, guid: 93e8d860bfd5e45eb9102ef8aec09826, type: 3}
+      propertyPath: driftFactor
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5437073390709071167, guid: 93e8d860bfd5e45eb9102ef8aec09826, type: 3}
+      propertyPath: rotationSpeed
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 5437073390709071167, guid: 93e8d860bfd5e45eb9102ef8aec09826, type: 3}
+      propertyPath: carTemp.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5437073390709071167, guid: 93e8d860bfd5e45eb9102ef8aec09826, type: 3}
+      propertyPath: carSprites.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5437073390709071167, guid: 93e8d860bfd5e45eb9102ef8aec09826, type: 3}
+      propertyPath: carSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 2073694395, guid: fba3d66737eee4a5b9cda15f84bdda79, type: 3}
+    - target: {fileID: 5437073390709071167, guid: 93e8d860bfd5e45eb9102ef8aec09826, type: 3}
+      propertyPath: carSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: -357272394, guid: fba3d66737eee4a5b9cda15f84bdda79, type: 3}
+    - target: {fileID: 5437073390709071167, guid: 93e8d860bfd5e45eb9102ef8aec09826, type: 3}
+      propertyPath: carSprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 503911030, guid: fba3d66737eee4a5b9cda15f84bdda79, type: 3}
+    - target: {fileID: 5437073390709071167, guid: 93e8d860bfd5e45eb9102ef8aec09826, type: 3}
+      propertyPath: carSprites.Array.data[3]
+      value: 
+      objectReference: {fileID: -1790387655, guid: fba3d66737eee4a5b9cda15f84bdda79, type: 3}
+    - target: {fileID: 5437073390709071167, guid: 93e8d860bfd5e45eb9102ef8aec09826, type: 3}
+      propertyPath: carSprites.Array.data[4]
+      value: 
+      objectReference: {fileID: 2063601177, guid: fba3d66737eee4a5b9cda15f84bdda79, type: 3}
+    - target: {fileID: 5437073390709071167, guid: 93e8d860bfd5e45eb9102ef8aec09826, type: 3}
+      propertyPath: carSprites.Array.data[5]
+      value: 
+      objectReference: {fileID: 1549788662, guid: fba3d66737eee4a5b9cda15f84bdda79, type: 3}
+    - target: {fileID: 5437073390709071167, guid: 93e8d860bfd5e45eb9102ef8aec09826, type: 3}
+      propertyPath: carSprites.Array.data[6]
+      value: 
+      objectReference: {fileID: -791684360, guid: fba3d66737eee4a5b9cda15f84bdda79, type: 3}
+    - target: {fileID: 5437073390709071167, guid: 93e8d860bfd5e45eb9102ef8aec09826, type: 3}
+      propertyPath: carSprites.Array.data[7]
+      value: 
+      objectReference: {fileID: -1808212283, guid: fba3d66737eee4a5b9cda15f84bdda79, type: 3}
+    - target: {fileID: 5437073390709071167, guid: 93e8d860bfd5e45eb9102ef8aec09826, type: 3}
+      propertyPath: carSprites.Array.data[8]
+      value: 
+      objectReference: {fileID: 180475245, guid: fba3d66737eee4a5b9cda15f84bdda79, type: 3}
+    - target: {fileID: 5437073390709071167, guid: 93e8d860bfd5e45eb9102ef8aec09826, type: 3}
+      propertyPath: carSpritesFull.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7482784261718866257, guid: 93e8d860bfd5e45eb9102ef8aec09826, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -9.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7482784261718866257, guid: 93e8d860bfd5e45eb9102ef8aec09826, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 7482784261718866257, guid: 93e8d860bfd5e45eb9102ef8aec09826, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7482784261718866257, guid: 93e8d860bfd5e45eb9102ef8aec09826, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7482784261718866257, guid: 93e8d860bfd5e45eb9102ef8aec09826, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7482784261718866257, guid: 93e8d860bfd5e45eb9102ef8aec09826, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7482784261718866257, guid: 93e8d860bfd5e45eb9102ef8aec09826, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7482784261718866257, guid: 93e8d860bfd5e45eb9102ef8aec09826, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7482784261718866257, guid: 93e8d860bfd5e45eb9102ef8aec09826, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7482784261718866257, guid: 93e8d860bfd5e45eb9102ef8aec09826, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8251213955530797439, guid: 93e8d860bfd5e45eb9102ef8aec09826, type: 3}
+      propertyPath: m_Name
+      value: ai_truck Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8251213955530797439, guid: 93e8d860bfd5e45eb9102ef8aec09826, type: 3}
+      propertyPath: m_TagString
+      value: BotCar
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8251213955530797439, guid: 93e8d860bfd5e45eb9102ef8aec09826, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2544172443895014514}
+  m_SourcePrefab: {fileID: 100100000, guid: 93e8d860bfd5e45eb9102ef8aec09826, type: 3}
+--- !u!1 &2190604676998855694 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8251213955530797439, guid: 93e8d860bfd5e45eb9102ef8aec09826, type: 3}
+  m_PrefabInstance: {fileID: 7846577014952414577}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2544172443895014514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2190604676998855694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 284ab8ddf02e248b5b49e83daae1a359, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aiMode: 0
+  pursuitSpeed: 0.8
+  turnStrength: 2
+  predictionTime: 0.3
+  steeringResponseRate: 0.7
+  steeringAngleDivisor: 45
+  alignmentSteeringFactor: 0.5
+  minTurnSpeedFactor: 0.7
+  useAntiCircling: 1
+  circlingDetectionTime: 2
+  recoveryDuration: 0.8
+  minDistanceProgress: 0.3
+  showDebugVisuals: 1
+  showDebugLogs: 1
+  debugRayLength: 3

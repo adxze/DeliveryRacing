@@ -1,3 +1,25 @@
+## Developer & Contributions
+
+Adiguna S Ligawan (Game Developer & Systems Designer)
+  <br>
+
+## About
+
+Delivery Rush is a high-octane arcade delivery game that combines the thrill of high-speed driving with strategic package delivery missions. Built with innovative sprite stacking technology to achieve a unique pseudo-3D look using 2D pixel art, the game features realistic car physics with velocity-based movement, acceleration curves, and responsive turning mechanics. Navigate through busy city streets, evade traffic, escape police chases, and deliver packages on time to earn high scores in this fast-paced, endlessly replayable arcade experience.
+<br>
+
+## Key Features
+
+**Sprite Stacking Technology**: Innovative visual technique that creates stunning pseudo-3D graphics from 2D pixel art, giving the game a unique and stylish appearance.
+
+**Realistic Car Physics**: Velocity-based movement system with proper acceleration, braking, drifting, and turning mechanics that make every delivery feel authentic and exciting.
+
+**High-Speed Delivery Gameplay**: Intense time-based missions where you must pickup and deliver packages while avoiding traffic, police, and other obstacles.
+
+**Arcade-Style Action**: Fast-paced, pick-up-and-play gameplay with tight controls, combo systems, and high score chasing for maximum replayability.
+
+<br>
+
 <table>
   <tr>
     <td align="left" width="50%">
@@ -295,27 +317,7 @@ classDiagram
 
 <br>
 
-## Developer & Contributions
 
-- Adiguna S Ligawan (Game Developer & Systems Designer)
-  <br>
-
-## About
-
-Delivery Rush is a high-octane arcade delivery game that combines the thrill of high-speed driving with strategic package delivery missions. Built with innovative sprite stacking technology to achieve a unique pseudo-3D look using 2D pixel art, the game features realistic car physics with velocity-based movement, acceleration curves, and responsive turning mechanics. Navigate through busy city streets, evade traffic, escape police chases, and deliver packages on time to earn high scores in this fast-paced, endlessly replayable arcade experience.
-<br>
-
-## Key Features
-
-**Sprite Stacking Technology**: Innovative visual technique that creates stunning pseudo-3D graphics from 2D pixel art, giving the game a unique and stylish appearance.
-
-**Realistic Car Physics**: Velocity-based movement system with proper acceleration, braking, drifting, and turning mechanics that make every delivery feel authentic and exciting.
-
-**High-Speed Delivery Gameplay**: Intense time-based missions where you must pickup and deliver packages while avoiding traffic, police, and other obstacles.
-
-**Arcade-Style Action**: Fast-paced, pick-up-and-play gameplay with tight controls, combo systems, and high score chasing for maximum replayability.
-
-<br>
 
 ## Play The Game
 
